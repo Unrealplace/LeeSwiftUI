@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>swift:自定义UICollectionViewFlowLayout - brave-sailor - 博客园</title>
+<link type="text/css" rel="stylesheet" href="swift_%E8%87%AA%E5%AE%9A%E4%B9%89UICollectionViewFlowLayout%20-%20brave-sailor%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="swift_%E8%87%AA%E5%AE%9A%E4%B9%89UICollectionViewFlowLayout%20-%20brave-sailor%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/bundle-CodingLife.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="swift_%E8%87%AA%E5%AE%9A%E4%B9%89UICollectionViewFlowLayout%20-%20brave-sailor%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/bundle-CodingLife-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/Free-Thinker/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/Free-Thinker/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/Free-Thinker/wlwmanifest.xml">
+<script src="swift_%E8%87%AA%E5%AE%9A%E4%B9%89UICollectionViewFlowLayout%20-%20brave-sailor%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'Free-Thinker', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="swift_%E8%87%AA%E5%AE%9A%E4%B9%89UICollectionViewFlowLayout%20-%20brave-sailor%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/blog-common.js" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/Free-Thinker/"><img id="blogLogo" src="swift_%E8%87%AA%E5%AE%9A%E4%B9%89UICollectionViewFlowLayout%20-%20brave-sailor%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/Free-Thinker/">brave-sailor</a></h1>
+<h2></h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/Free-Thinker/">首页</a></li>
+<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/brave-sailor">联系</a></li>
+<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/Free-Thinker/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/Free-Thinker/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<span id="stats_post_count">随笔 - 2260&nbsp; </span>
+<span id="stats_article_count">文章 - 0&nbsp; </span>
+<span id="stats-comment_count">评论 - 12</span>
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/Free-Thinker/p/6004439.html">swift:自定义UICollectionViewFlowLayout</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><h2>写作目的</h2>
+<p><em>UICollectionView</em>是ios中一个十分强大的控件，利用它能够十分简单的实现一些很好看的效果。<em>UICollectionView</em>的效果又依赖于<em>UICollectionViewLayout</em>或者它的子类<em>UICollectionViewFlowLayout</em>。而关于自定义<em>UICollectionViewFlowLayout</em>网上介绍的比较少。出于这一目的，写下这边文章，希望能够帮助<strong>初学者</strong>(我也是)实现一些简单的<strong>流水布局</strong>效果。下面的演示就是本篇文章的目标。最终版代码和所有图片素材(图片名和项目中有点不一样)已经上传至<a href="https://github.com/SmallLang/UICollectionViewLayoutDemo" target="_blank">Github</a>,大家可以下载学习。</p>
+<div class="image-package imagebubble"> <iframe id="iframe_0.6854068044388489" src="data:text/html;charset=utf8,%3Cstyle%3Ebody%7Bmargin:0;padding:0%7D%3C/style%3E%3Cimg%20id=%22img%22%20src=%22http://7xnwdv.com1.z0.glb.clouddn.com/%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589UICollectionViewFlowLayoutLineLayout%25E6%25BC%2594%25E7%25A4%25BA.gif?_=6004439%22%20style=%22border:none;max-width:848px%22%3E%3Cscript%3Ewindow.onload%20=%20function%20%28%29%20%7Bvar%20img%20=%20document.getElementById%28%27img%27%29;%20window.parent.postMessage%28%7BiframeId:%27iframe_0.6854068044388489%27,width:img.width,height:img.height%7D,%20%27http://www.cnblogs.com%27%29;%7D%3C/script%3E" style="border: medium none; width: 313px; height: 360px;" scrolling="no" frameborder="0"></iframe><br>
+</div>
+<h2>几个简单的概念</h2>
+<ul>
+<li>UICollectionViewLayout与UICollectionViewFlowLayout</li>
+
+</ul>
+<p><em>UICollectionView</em>的显示效果几乎全部由<em>UICollectionViewLayout</em>负责(甚至是cell的大小)。所以，一般开发中所说的自定义<em>UICollectionView</em>也就是自定义<em>UICollectionViewLayout</em>。而<em>UICollectionViewFlowLayout</em>是继承自<em>UICollectionViewLayout</em>的，由苹果官方实现的流水布局效果。如果想自己实现一些流水布局效果可以继承自最原始<em>UICollectionViewLayout</em>从头写，也可以继承自<em>UICollectionViewFlowLayout</em>进行修改。文本是继承自<em>UICollectionViewFlowLay</em>t*</p>
+<ul>
+<li>UICollectionViewLayoutAttributes</li>
+
+</ul>
+<p>第二点就说了<em>UICollectionView</em>的显示效果几乎全部由<em>UICollectionViewLayout</em>负责，而真正存储着每一个cell的位置、大小等属性的是<strong>UICollectionViewLayoutAttributes</strong>。每一个cell对应着一个属于自己的<em>UICollectionViewLayoutAttributes</em>，而<em>UICollectionViewLayout</em>正是利用<em>UICollectionViewLayoutAttributes</em>里存在的信息对每一个cel进行布局。</p>
+<ul>
+<li>流水布局</li>
+
+</ul>
+<p>所谓流水布局就是：就是cell以一定的规律进行如同流水一般的有规律的一个接着一个的排列。最经典的流水布局便是九宫格布局，绝大部分的图片选择器也是流水布局。</p>
+<h2>准备工作</h2>
+<ul>
+<li>xcode7.0</li>
+<li>swift2.0</li>
+<li>自己我提供的素材并在控制器中添加如下代码</li>
+
+</ul>
+<pre class="hljs swift"><code class="swift"><span class="hljs-class"><span class="hljs-keyword">class <span class="hljs-title">ViewController: <span class="hljs-title">UIViewController,<span class="hljs-title">UICollectionViewDelegate, <span class="hljs-title">UICollectionViewDataSource {
+
+    lazy <span class="hljs-keyword">var imageArray: [<span class="hljs-type">String] = {
+
+        <span class="hljs-keyword">var array: [<span class="hljs-type">String] = []
+
+        <span class="hljs-keyword">for i <span class="hljs-keyword">in <span class="hljs-number">1...<span class="hljs-number">20 {
+            array.append(<span class="hljs-string">"<span class="hljs-subst">\(i)-1")
+        }
+
+        <span class="hljs-keyword">return array
+    }()
+
+    <span class="hljs-keyword">override <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">viewDidLoad<span class="hljs-params">() {
+        <span class="hljs-keyword">super.viewDidLoad()
+
+        <span class="hljs-keyword">let collectionView =  <span class="hljs-type">UICollectionView(frame: <span class="hljs-type">CGRectMake(<span class="hljs-number">0, <span class="hljs-number">100, <span class="hljs-keyword">self.view.bounds.width, <span class="hljs-number">200), collectionViewLayout: <span class="hljs-type">UICollectionViewFlowLayout())
+        collectionView.backgroundColor = <span class="hljs-type">UIColor.blackColor()
+        collectionView.dataSource  = <span class="hljs-keyword">self
+        collectionView.delegate = <span class="hljs-keyword">self
+
+        collectionView.registerClass(<span class="hljs-type">ImageTextCell.<span class="hljs-keyword">self, forCellWithReuseIdentifier: <span class="hljs-string">"ImageTextCell")
+        <span class="hljs-keyword">self.view.addSubview(collectionView)
+    }
+
+    <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">collectionView<span class="hljs-params">(collectionView: UICollectionView, numberOfItemsInSection section: Int) -&gt; <span class="hljs-type">Int {
+        <span class="hljs-keyword">return <span class="hljs-keyword">self.imageArray.<span class="hljs-built_in">count;
+    }
+
+    <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">collectionView<span class="hljs-params">(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -&gt; <span class="hljs-type">UICollectionViewCell {
+
+        <span class="hljs-keyword">let cell = collectionView.dequeueReusableCellWithReuseIdentifier(<span class="hljs-string">"ImageTextCell", forIndexPath: indexPath) <span class="hljs-keyword">as! <span class="hljs-type">ImageTextCell
+        cell.imageStr = <span class="hljs-keyword">self.imageArray[indexPath.item]
+
+        <span class="hljs-keyword">return cell
+    }
+
+}
+<span class="hljs-comment">//这里是自定义cell的代码
+<span class="hljs-class"><span class="hljs-keyword">class <span class="hljs-title">ImageTextCell: <span class="hljs-title">UICollectionViewCell {
+
+    <span class="hljs-keyword">var imageView: <span class="hljs-type">UIImageView?
+    <span class="hljs-keyword">var imageStr: <span class="hljs-type">NSString? {
+
+        <span class="hljs-keyword">didSet {
+            <span class="hljs-keyword">self.imageView!.image = <span class="hljs-type">UIImage(named: <span class="hljs-keyword">self.imageStr <span class="hljs-keyword">as! <span class="hljs-type">String)
+        }
+
+    }
+
+    <span class="hljs-keyword">override <span class="hljs-keyword">init(frame: <span class="hljs-type">CGRect) {
+        <span class="hljs-keyword">super.<span class="hljs-keyword">init(frame: frame)
+
+        <span class="hljs-keyword">self.imageView = <span class="hljs-type">UIImageView()
+        <span class="hljs-keyword">self.addSubview(<span class="hljs-keyword">self.imageView!)
+
+    }
+
+    <span class="hljs-keyword">override <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">layoutSubviews<span class="hljs-params">() {
+        <span class="hljs-keyword">super.layoutSubviews()
+        <span class="hljs-keyword">self.imageView?.frame = <span class="hljs-keyword">self.bounds
+    }
+
+    required <span class="hljs-keyword">init?(coder aDecoder: <span class="hljs-type">NSCoder) {
+        fatalError(<span class="hljs-string">"init(coder:) has not been implemented")
+    }
+
+}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>效果应该是这样的</p>
+<div class="image-package imagebubble"> <iframe id="iframe_0.5441397586078769" src="data:text/html;charset=utf8,%3Cstyle%3Ebody%7Bmargin:0;padding:0%7D%3C/style%3E%3Cimg%20id=%22img%22%20src=%22http://7xnwdv.com1.z0.glb.clouddn.com/%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589UICollectionViewFlowLayout%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202015-11-06%252016.03.33.png?_=6004439%22%20style=%22border:none;max-width:848px%22%3E%3Cscript%3Ewindow.onload%20=%20function%20%28%29%20%7Bvar%20img%20=%20document.getElementById%28%27img%27%29;%20window.parent.postMessage%28%7BiframeId:%27iframe_0.5441397586078769%27,width:img.width,height:img.height%7D,%20%27http://www.cnblogs.com%27%29;%7D%3C/script%3E" style="border: medium none; width: 320px; height: 380px;" scrolling="no" frameborder="0"></iframe><br>
+</div>
+<h2>编码</h2>
+<h3>水平排列</h3>
+<p>创建一个名为<em>LineLayout.swift</em>的文件(继承自UICollectionViewFlowLayout)。添加如下几行代码</p>
+<pre class="hljs swift"><code class="swift">    <span class="hljs-keyword">var itemW: <span class="hljs-type">CGFloat = <span class="hljs-number">100
+    <span class="hljs-keyword">var itemH: <span class="hljs-type">CGFloat = <span class="hljs-number">100
+
+    <span class="hljs-keyword">override <span class="hljs-keyword">init() {
+        <span class="hljs-keyword">super.<span class="hljs-keyword">init()
+
+        <span class="hljs-comment">//设置每一个元素的大小
+        <span class="hljs-keyword">self.itemSize = <span class="hljs-type">CGSizeMake(itemW, itemH)
+        <span class="hljs-comment">//设置滚动方向
+        <span class="hljs-keyword">self.scrollDirection = .<span class="hljs-type">Horizontal
+        <span class="hljs-comment">//设置间距
+        <span class="hljs-keyword">self.minimumLineSpacing = <span class="hljs-number">0.7 * itemW
+    }
+
+    <span class="hljs-comment">//苹果推荐，对一些布局的准备操作放在这里
+    <span class="hljs-keyword">override <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">prepareLayout<span class="hljs-params">() {
+        <span class="hljs-comment">//设置边距(让第一张图片与最后一张图片出现在最中央)ps:这里可以进行优化
+        <span class="hljs-keyword">let inset = (<span class="hljs-keyword">self.collectionView?.bounds.width ?? <span class="hljs-number">0)  * <span class="hljs-number">0.5 - <span class="hljs-keyword">self.itemSize.width * <span class="hljs-number">0.5
+        <span class="hljs-keyword">self.sectionInset = <span class="hljs-type">UIEdgeInsetsMake(<span class="hljs-number">0, inset, <span class="hljs-number">0, inset)
+    }</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>效果就成了这样</p>
+<div class="image-package imagebubble"> <iframe id="iframe_0.8543782458309261" src="data:text/html;charset=utf8,%3Cstyle%3Ebody%7Bmargin:0;padding:0%7D%3C/style%3E%3Cimg%20id=%22img%22%20src=%22http://7xnwdv.com1.z0.glb.clouddn.com/%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589UICollectionViewFlowLayout%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7%25202015-11-06%252016.33.42.png?_=6004439%22%20style=%22border:none;max-width:848px%22%3E%3Cscript%3Ewindow.onload%20=%20function%20%28%29%20%7Bvar%20img%20=%20document.getElementById%28%27img%27%29;%20window.parent.postMessage%28%7BiframeId:%27iframe_0.8543782458309261%27,width:img.width,height:img.height%7D,%20%27http://www.cnblogs.com%27%29;%7D%3C/script%3E" style="border: medium none; width: 320px; height: 389px;" scrolling="no" frameborder="0"></iframe><br>
+</div>
+<h3>shouldInvalidateLayoutForBoundsChange方法与layoutAttributesForElementsInRect方法关系</h3>
+<p>标题所写出的是<strong>十分重要</strong>的两方法，先看我添加的如下测试代码</p>
+<pre class="hljs swift"><code class="swift">    <span class="hljs-comment">/**
+    返回true只要显示的边界发生改变就重新布局:(默认是false)
+    内部会重新调用prepareLayout和调用
+    layoutAttributesForElementsInRect方法获得部分cell的布局属性
+    */
+    <span class="hljs-keyword">override <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">shouldInvalidateLayoutForBoundsChange<span class="hljs-params">(newBounds: CGRect) -&gt; <span class="hljs-type">Bool {
+        <span class="hljs-built_in">print(newBounds)
+        <span class="hljs-keyword">return <span class="hljs-literal">true
+    }
+
+    <span class="hljs-comment">/**
+    用来计算出rect这个范围内所有cell的UICollectionViewLayoutAttributes，
+    并返回。
+    */
+    <span class="hljs-keyword">override <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">layoutAttributesForElementsInRect<span class="hljs-params">(rect: CGRect) -&gt; [<span class="hljs-type">UICollectionViewLayoutAttributes]? {
+        <span class="hljs-built_in">print(<span class="hljs-string">"layoutAttributesForElementsInRect==<span class="hljs-subst">\(rect)")
+        <span class="hljs-keyword">let ret = <span class="hljs-keyword">super.layoutAttributesForElementsInRect(rect)
+<span class="hljs-comment">//        print(ret?.count)
+        <span class="hljs-keyword">return ret
+    }</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>为了解释，我添加了几个打印语句，在<em>shouldInvalidateLayoutForBoundsChange</em>返回值设置为<em>true</em>后，会发现<em>layoutAttributesForElementsInRect</em>方法调用十分频繁，几乎是每滑动一点就会调用一次。观察打印信息可以发现很多<strong>秘密</strong>。</p>
+<ul>
+<li>启动程序有如下打印</li>
+</ul>
+<pre class="hljs cpp"><code class="cpp">layoutAttributesForElementsInRect==(<span class="hljs-number">0.0, <span class="hljs-number">0.0, <span class="hljs-number">568.0, <span class="hljs-number">568.0)</span></span></span></span></code></pre>
+<p>好像看不太懂，没事，尝试滑动。</p>
+<ul>
+<li>滑动</li>
+</ul>
+<pre class="hljs cpp"><code class="cpp">(<span class="hljs-number">0.5, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0) <span class="hljs-comment">//这个是shouldInvalidateLayoutForBoundsChange方法的打印的newBounds
+layoutAttributesForElementsInRect==(<span class="hljs-number">0.0, <span class="hljs-number">0.0, <span class="hljs-number">568.0, <span class="hljs-number">568.0)<span class="hljs-comment">//这个是layoutAttributesForElementsInRect打印的rect
+(<span class="hljs-number">1.5, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0) 
+layoutAttributesForElementsInRect==(<span class="hljs-number">0.0, <span class="hljs-number">0.0, <span class="hljs-number">568.0, <span class="hljs-number">568.0)
+(<span class="hljs-number">3.5, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0)
+layoutAttributesForElementsInRect==(<span class="hljs-number">0.0, <span class="hljs-number">0.0, <span class="hljs-number">568.0, <span class="hljs-number">568.0)
+...</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>不难发现，<em>shouldInvalidateLayoutForBoundsChange</em>的参数<em>newBounds</em>的意思是<strong>UICollectionView的可见矩形</strong>。什么叫可见矩阵？，因为<em>UICollectionView</em>也是<em>UIScrollView</em>的子类，所以它真正的“内容”远远不止我们屏幕上看到的那么多(这里不再话时间继续解释可见矩阵)。那好像<em>layoutAttributesForElementsInRect</em>打印出来的东西没有啥变化是怎么回事？不急继续滑动。</p>
+<ul>
+<li>解密</li>
+</ul>
+<p>继续滑动后有这些信息，经过删除一些无用信息，显示如下。(注意看有注释的行)</p>
+<pre class="hljs cpp"><code class="cpp">...
+(<span class="hljs-number">248.0, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0)
+layoutAttributesForElementsInRect==(<span class="hljs-number">0.0, <span class="hljs-number">0.0, <span class="hljs-number">568.0, <span class="hljs-number">568.0)
+(<span class="hljs-number">249.0, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0)    <span class="hljs-comment">//这里是可见矩阵
+layoutAttributesForElementsInRect==(<span class="hljs-number">0.0, <span class="hljs-number">0.0, <span class="hljs-number">1136.0, <span class="hljs-number">568.0)  <span class="hljs-comment">//这里变化了1136.0是568.0的2倍（1136代表的是宽度的意思应该知道不需要解释吧）
+(<span class="hljs-number">250.0, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0)
+layoutAttributesForElementsInRect==(<span class="hljs-number">0.0, <span class="hljs-number">0.0, <span class="hljs-number">1136.0, <span class="hljs-number">568.0)
+...
+(<span class="hljs-number">567.5, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0)
+layoutAttributesForElementsInRect==(<span class="hljs-number">0.0, <span class="hljs-number">0.0, <span class="hljs-number">1136.0, <span class="hljs-number">568.0)
+(<span class="hljs-number">568.5, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0)<span class="hljs-comment">//这里是可见矩阵
+layoutAttributesForElementsInRect==(<span class="hljs-number">568.0, <span class="hljs-number">0.0, <span class="hljs-number">568.0, <span class="hljs-number">568.0)  <span class="hljs-comment">// 这里又变化了，x变成了568，宽度变成了568
+(<span class="hljs-number">571.0, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0)
+layoutAttributesForElementsInRect==(<span class="hljs-number">568.0, <span class="hljs-number">0.0, <span class="hljs-number">568.0, <span class="hljs-number">568.0)
+...
+(<span class="hljs-number">815.0, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0)
+layoutAttributesForElementsInRect==(<span class="hljs-number">568.0, <span class="hljs-number">0.0, <span class="hljs-number">568.0, <span class="hljs-number">568.0)
+(<span class="hljs-number">817.0, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0)
+layoutAttributesForElementsInRect==(<span class="hljs-number">568.0, <span class="hljs-number">0.0, <span class="hljs-number">1136.0, <span class="hljs-number">568.0) <span class="hljs-comment">//还有这里
+...
+(<span class="hljs-number">1135.0, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0)
+layoutAttributesForElementsInRect==(<span class="hljs-number">568.0, <span class="hljs-number">0.0, <span class="hljs-number">1136.0, <span class="hljs-number">568.0)
+(<span class="hljs-number">1136.0, <span class="hljs-number">0.0, <span class="hljs-number">320.0, <span class="hljs-number">200.0)
+layoutAttributesForElementsInRect==(<span class="hljs-number">1136.0, <span class="hljs-number">0.0, <span class="hljs-number">568.0, <span class="hljs-number">568.0)  <span class="hljs-comment">//还有这里</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>上面的的数据展示其实已经足够解释一切了。读到这里，推荐你自己去找找规律，通过自己发现的奥秘绝对比直接看我写出答案有意义的多！下面这张图例已经说明了一切</p>
+<div class="image-package imagebubble"> <iframe id="iframe_0.43186950455299056" src="data:text/html;charset=utf8,%3Cstyle%3Ebody%7Bmargin:0;padding:0%7D%3C/style%3E%3Cimg%20id=%22img%22%20src=%22http://7xnwdv.com1.z0.glb.clouddn.com/%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589UICollectionViewFlowLayoutnewBounds%25E4%25B8%258Erect.png?_=6004439%22%20style=%22border:none;max-width:848px%22%3E%3Cscript%3Ewindow.onload%20=%20function%20%28%29%20%7Bvar%20img%20=%20document.getElementById%28%27img%27%29;%20window.parent.postMessage%28%7BiframeId:%27iframe_0.43186950455299056%27,width:img.width,height:img.height%7D,%20%27http://www.cnblogs.com%27%29;%7D%3C/script%3E" style="border: medium none; width: 627px; height: 1661px;" scrolling="no" frameborder="0"></iframe><br>
+</div>
+<p>至于为什么会是568的倍数。。因为我是用的5s模拟器。你换成4s就变成480了。至于这样设计的理由，我猜测是为了方便进行范围的确定。</p>
+<h3>缩放效果</h3>
+<p>了解了上面<strong>shouldInvalidateLayoutForBoundsChange方法与layoutAttributesForElementsInRect方法关系</strong>后，可以继续进行编码了。因为主要的内容已经讲解完毕，剩下的就只是一些动画的计算，所以不再继续讲解，直接贴出代码。</p>
+<pre class="hljs swift"><code class="swift"><span class="hljs-class"><span class="hljs-keyword">class <span class="hljs-title">LineLayout: <span class="hljs-title">UICollectionViewFlowLayout {
+
+    <span class="hljs-keyword">var itemW: <span class="hljs-type">CGFloat = <span class="hljs-number">100
+    <span class="hljs-keyword">var itemH: <span class="hljs-type">CGFloat = <span class="hljs-number">100
+
+    lazy <span class="hljs-keyword">var inset: <span class="hljs-type">CGFloat = {
+        <span class="hljs-comment">//这样设置，inset就只会被计算一次，减少了prepareLayout的计算步骤
+        <span class="hljs-keyword">return  (<span class="hljs-keyword">self.collectionView?.bounds.width ?? <span class="hljs-number">0)  * <span class="hljs-number">0.5 - <span class="hljs-keyword">self.itemSize.width * <span class="hljs-number">0.5
+        }()
+
+    <span class="hljs-keyword">override <span class="hljs-keyword">init() {
+        <span class="hljs-keyword">super.<span class="hljs-keyword">init()
+
+        <span class="hljs-comment">//设置每一个元素的大小
+        <span class="hljs-keyword">self.itemSize = <span class="hljs-type">CGSizeMake(itemW, itemH)
+        <span class="hljs-comment">//设置滚动方向
+        <span class="hljs-keyword">self.scrollDirection = .<span class="hljs-type">Horizontal
+        <span class="hljs-comment">//设置间距
+        <span class="hljs-keyword">self.minimumLineSpacing = <span class="hljs-number">0.7 * itemW
+    }
+
+    <span class="hljs-comment">//苹果推荐，对一些布局的准备操作放在这里
+    <span class="hljs-keyword">override <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">prepareLayout<span class="hljs-params">() {
+
+        <span class="hljs-comment">//设置边距(让第一张图片与最后一张图片出现在最中央)
+        <span class="hljs-keyword">self.sectionInset = <span class="hljs-type">UIEdgeInsetsMake(<span class="hljs-number">0, inset, <span class="hljs-number">0, inset)
+    }
+
+    required <span class="hljs-keyword">init?(coder aDecoder: <span class="hljs-type">NSCoder) {
+        fatalError(<span class="hljs-string">"init(coder:) has not been implemented")
+    }
+
+    <span class="hljs-comment">/**
+    返回true只要显示的边界发生改变就重新布局:(默认是false)
+    内部会重新调用prepareLayout和调用
+    layoutAttributesForElementsInRect方法获得部分cell的布局属性
+    */
+    <span class="hljs-keyword">override <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">shouldInvalidateLayoutForBoundsChange<span class="hljs-params">(newBounds: CGRect) -&gt; <span class="hljs-type">Bool {
+        <span class="hljs-keyword">return <span class="hljs-literal">true
+    }
+
+    <span class="hljs-comment">/**
+    用来计算出rect这个范围内所有cell的UICollectionViewLayoutAttributes，
+    并返回。
+    */
+    <span class="hljs-keyword">override <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">layoutAttributesForElementsInRect<span class="hljs-params">(rect: CGRect) -&gt; [<span class="hljs-type">UICollectionViewLayoutAttributes]? {
+        <span class="hljs-comment">//取出rect范围内所有的UICollectionViewLayoutAttributes，然而
+        <span class="hljs-comment">//我们并不关心这个范围内所有的cell的布局，我们做动画是做给人看的，
+        <span class="hljs-comment">//所以我们只需要取出屏幕上可见的那些cell的rect即可
+        <span class="hljs-keyword">let array = <span class="hljs-keyword">super.layoutAttributesForElementsInRect(rect)
+
+        <span class="hljs-comment">//可见矩阵
+        <span class="hljs-keyword">let visiableRect = <span class="hljs-type">CGRectMake(<span class="hljs-keyword">self.collectionView!.contentOffset.x, <span class="hljs-keyword">self.collectionView!.contentOffset.y, <span class="hljs-keyword">self.collectionView!.frame.width, <span class="hljs-keyword">self.collectionView!.frame.height)
+
+        <span class="hljs-comment">//接下来的计算是为了动画效果
+        <span class="hljs-keyword">let maxCenterMargin = <span class="hljs-keyword">self.collectionView!.bounds.width * <span class="hljs-number">0.5 + itemW * <span class="hljs-number">0.5;
+        <span class="hljs-comment">//获得collectionVIew中央的X值(即显示在屏幕中央的X)
+        <span class="hljs-keyword">let centerX = <span class="hljs-keyword">self.collectionView!.contentOffset.x + <span class="hljs-keyword">self.collectionView!.frame.size.width * <span class="hljs-number">0.5;
+        <span class="hljs-keyword">for attributes <span class="hljs-keyword">in array! {
+            <span class="hljs-comment">//如果不在屏幕上，直接跳过
+            <span class="hljs-keyword">if !<span class="hljs-type">CGRectIntersectsRect(visiableRect, attributes.frame) {<span class="hljs-keyword">continue}
+            <span class="hljs-keyword">let scale = <span class="hljs-number">1 + (<span class="hljs-number">0.8 - <span class="hljs-built_in">abs(centerX - attributes.center.x) / maxCenterMargin)
+            attributes.transform = <span class="hljs-type">CGAffineTransformMakeScale(scale, scale)
+        }
+
+        <span class="hljs-keyword">return array
+    }
+
+    <span class="hljs-comment">/**
+    用来设置collectionView停止滚动那一刻的位置
+
+    - parameter proposedContentOffset: 原本collectionView停止滚动那一刻的位置
+    - parameter velocity:              滚动速度
+
+    - returns: 最终停留的位置
+    */
+    <span class="hljs-keyword">override <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">targetContentOffsetForProposedContentOffset<span class="hljs-params">(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -&gt; <span class="hljs-type">CGPoint {
+        <span class="hljs-comment">//实现这个方法的目的是：当停止滑动，时刻有一张图片是位于屏幕最中央的。
+
+        <span class="hljs-keyword">let lastRect = <span class="hljs-type">CGRectMake(proposedContentOffset.x, proposedContentOffset.y, <span class="hljs-keyword">self.collectionView!.frame.width, <span class="hljs-keyword">self.collectionView!.frame.height)
+        <span class="hljs-comment">//获得collectionVIew中央的X值(即显示在屏幕中央的X)
+        <span class="hljs-keyword">let centerX = proposedContentOffset.x + <span class="hljs-keyword">self.collectionView!.frame.width * <span class="hljs-number">0.5;
+        <span class="hljs-comment">//这个范围内所有的属性
+        <span class="hljs-keyword">let array = <span class="hljs-keyword">self.layoutAttributesForElementsInRect(lastRect)
+
+        <span class="hljs-comment">//需要移动的距离
+        <span class="hljs-keyword">var adjustOffsetX = <span class="hljs-type">CGFloat(<span class="hljs-type">MAXFLOAT);
+        <span class="hljs-keyword">for attri <span class="hljs-keyword">in array! {
+            <span class="hljs-keyword">if <span class="hljs-built_in">abs(attri.center.x - centerX) &lt; <span class="hljs-built_in">abs(adjustOffsetX) {
+                adjustOffsetX = attri.center.x - centerX;
+            }
+        }
+
+        <span class="hljs-keyword">return <span class="hljs-type">CGPointMake(proposedContentOffset.x + adjustOffsetX, proposedContentOffset.y)
+    }
+}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>如果在控制器中加入下面两个方法，在你点击控制器，或者点击某个cell会有很炫的动画产生，这都是苹果帮我们做好的。</p>
+<pre class="hljs swift"><code class="swift">    <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">collectionView<span class="hljs-params">(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+
+        <span class="hljs-keyword">self.imageArray.removeAtIndex(indexPath.item)
+
+        collectionView.deleteItemsAtIndexPaths([indexPath])
+    }
+
+        <span class="hljs-keyword">override <span class="hljs-func"><span class="hljs-keyword">func <span class="hljs-title">touchesEnded<span class="hljs-params">(touches: Set&lt;UITouch&gt;, withEvent event: UIEvent?) {
+
+        <span class="hljs-keyword">if <span class="hljs-keyword">self.collectionView!.collectionViewLayout.isKindOfClass(<span class="hljs-type">LineLayout.<span class="hljs-keyword">self) {
+            <span class="hljs-keyword">self.collectionView!.setCollectionViewLayout(<span class="hljs-type">UICollectionViewFlowLayout(), animated: <span class="hljs-literal">true)
+        }<span class="hljs-keyword">else {
+            <span class="hljs-keyword">self.collectionView!.setCollectionViewLayout(<span class="hljs-type">LineLayout(), animated: <span class="hljs-literal">true)
+        }
+
+    }</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<h2>总结</h2>
+<p>本篇文章记录了我在自定义<em>UICollectionViewFlowLayout</em>过程中遇到的一些问题和解决方式(其实有一些坑爹的问题我没有列出，怕误导大家)。上面的全部都是基于<em>UICollectionViewFlowLayout</em>进行的更改。而我在GitHub上面上传的也有一份继承自<em>UICollectionViewLayout</em>的非流水布局。效果如下，因为原理性的东西都差不多，就不再进行分析(代码也有注释)。感兴趣的可以这<a href="https://github.com/SmallLang/UICollectionViewLayoutDemo" target="_blank">Github</a>上面下载。如果文章中有什么错误或者更好的方法、建议之类，感谢您的指出。我们共同学习！O(∩_∩)O！</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/Free-Thinker/category/661655.html" target="_blank">IOS开发</a>,<a href="http://www.cnblogs.com/Free-Thinker/category/738294.html" target="_blank">Swift语言</a></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(6004439,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow('899a89f2-8f00-e311-8d02-90b11c0b17d6');" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="swift_%E8%87%AA%E5%AE%9A%E4%B9%89UICollectionViewFlowLayout%20-%20brave-sailor%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="swift_%E8%87%AA%E5%AE%9A%E4%B9%89UICollectionViewFlowLayout%20-%20brave-sailor%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/Free-Thinker/" target="_blank"><img src="swift_%E8%87%AA%E5%AE%9A%E4%B9%89UICollectionViewFlowLayout%20-%20brave-sailor%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/sample_face.gif" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/Free-Thinker/">brave-sailor</a><br>
+            <a href="http://home.cnblogs.com/u/Free-Thinker/followees">关注 - 1</a><br>
+            <a href="http://home.cnblogs.com/u/Free-Thinker/followers">粉丝 - 40</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow('899a89f2-8f00-e311-8d02-90b11c0b17d6');return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(6004439,'Digg')">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(6004439,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/Free-Thinker/p/5996437.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/Free-Thinker/p/5996437.html" title="发布于2016-10-25 13:51">关于Android圆形图片的一种优化方案（可以显示网络图片）</a><br><a href="http://www.cnblogs.com/Free-Thinker/p/6006683.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/Free-Thinker/p/6006683.html" title="发布于2016-10-28 10:09">Autolayout环境设置任意个数相等间距排列的按钮的方法</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2016-10-27 16:26</span> <a href="http://www.cnblogs.com/Free-Thinker/">brave-sailor</a> 阅读(<span id="post_view_count">87</span>) 评论(<span id="post_comment_count">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6004439" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(6004439);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=159907,cb_entryId=6004439,cb_blogApp=currentBlogApp,cb_blogUserGuid='899a89f2-8f00-e311-8d02-90b11c0b17d6',cb_entryCreatedDate='2016/10/27 16:26:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login('commentform');">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="http://click.aliyun.com/m/10467/" target="_blank">【秘密】藏在春节红包里的技术秘密</a><br><a href="https://group.cnblogs.com/topic/76017.html" target="_blank">【活动】一元专享1500元微软智能云Azure</a><br></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"><a href="http://click.aliyun.com/m/10467/" target="_blank"><img src="swift_%E8%87%AA%E5%AE%9A%E4%B9%89UICollectionViewFlowLayout%20-%20brave-sailor%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/24442-20170215141525175-203290624.jpg" alt="" height="250" width="300"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/562993/" target="_blank">企业版Windows Insider项目即将上线</a><br> ·  <a href="http://news.cnblogs.com/n/562992/" target="_blank">阿里起诉傻推网刷单案开庭 索赔216万元</a><br> ·  <a href="http://news.cnblogs.com/n/562991/" target="_blank">亚马逊Rekognition可识别人脸 估算年龄范围</a><br> ·  <a href="http://news.cnblogs.com/n/562990/" target="_blank">谷歌Cloud Spanner云端数据库服务Beta测试启动</a><br> ·  <a href="http://news.cnblogs.com/n/562989/" target="_blank">宇航员分享情人节从轨道上拍摄的心形湖泊</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="ad_c2" class="c_ad_block"><a href="http://bbs.h3bpm.com/index.php?m=app&amp;app=product_download&amp;a=reg&amp;utm_source=csdn&amp;utm_medium=pic&amp;utm_campaign=show&amp;utm_content=v10&amp;utm_term=%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD" target="_blank"><img src="swift_%E8%87%AA%E5%AE%9A%E4%B9%89UICollectionViewFlowLayout%20-%20brave-sailor%20-%20%E5%8D%9A%E5%AE%A2%E5%9B%AD_files/24442-20170118152220281-363324784.jpg" alt="" height="60" width="468"></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/554260/" target="_blank">「代码家」的学习过程和学习经验分享</a><br> ·  <a href="http://kb.cnblogs.com/page/556770/" target="_blank">写给未来的程序媛</a><br> ·  <a href="http://kb.cnblogs.com/page/558087/" target="_blank">高质量的工程代码为什么难写</a><br> ·  <a href="http://kb.cnblogs.com/page/555750/" target="_blank">循序渐进地代码重构</a><br> ·  <a href="http://kb.cnblogs.com/page/554496/" target="_blank">技术的正宗与野路子</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"><b>历史上的今天:</b><br>2013-10-27 <a href="http://www.cnblogs.com/Free-Thinker/p/3391459.html">ViewPager的使用方法和实现过程</a><br>2013-10-27 <a href="http://www.cnblogs.com/Free-Thinker/p/3391388.html">Android提高第九篇之GridView和SQLite实现分页表格</a><br>2013-10-27 <a href="http://www.cnblogs.com/Free-Thinker/p/3391334.html">浅谈android4.0开发之GridLayout布局</a><br>2013-10-27 <a href="http://www.cnblogs.com/Free-Thinker/p/3391251.html">Android GridView 分页加载数据</a><br>2013-10-27 <a href="http://www.cnblogs.com/Free-Thinker/p/3391172.html">Android TableLayout中的使用说明</a><br></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/Free-Thinker/">brave-sailor</a><br>园龄：<a href="http://home.cnblogs.com/u/Free-Thinker/" title="入园时间：2013-08-09">3年6个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/Free-Thinker/followers/">40</a><br>关注：<a href="http://home.cnblogs.com/u/Free-Thinker/followees/">1</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow('899a89f2-8f00-e311-8d02-90b11c0b17d6')">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" title="Calendar" cellspacing="0" cellpadding="0">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar('2017/01/01');return false;">&lt;</a></td><td align="center">2017年2月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar('2017/03/01');return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" abbr="日" scope="col" align="center">日</th><th class="CalDayHeader" abbr="一" scope="col" align="center">一</th><th class="CalDayHeader" abbr="二" scope="col" align="center">二</th><th class="CalDayHeader" abbr="三" scope="col" align="center">三</th><th class="CalDayHeader" abbr="四" scope="col" align="center">四</th><th class="CalDayHeader" abbr="五" scope="col" align="center">五</th><th class="CalDayHeader" abbr="六" scope="col" align="center">六</th></tr><tr><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td class="CalWeekendDay" align="center">4</td></tr><tr><td class="CalWeekendDay" align="center">5</td><td align="center">6</td><td align="center"><a href="http://www.cnblogs.com/Free-Thinker/archive/2017/02/07.html"><u>7</u></a></td><td align="center">8</td><td align="center">9</td><td align="center">10</td><td class="CalWeekendDay" align="center">11</td></tr><tr><td class="CalWeekendDay" align="center">12</td><td align="center"><a href="http://www.cnblogs.com/Free-Thinker/archive/2017/02/13.html"><u>13</u></a></td><td align="center"><a href="http://www.cnblogs.com/Free-Thinker/archive/2017/02/14.html"><u>14</u></a></td><td class="CalTodayDay" align="center"><a href="http://www.cnblogs.com/Free-Thinker/archive/2017/02/15.html"><u>15</u></a></td><td align="center">16</td><td align="center">17</td><td class="CalWeekendDay" align="center">18</td></tr><tr><td class="CalWeekendDay" align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td align="center">24</td><td class="CalWeekendDay" align="center">25</td></tr><tr><td class="CalWeekendDay" align="center">26</td><td align="center">27</td><td align="center">28</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td></tr><tr><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td><td class="CalOtherMonthDay" align="center">8</td><td class="CalOtherMonthDay" align="center">9</td><td class="CalOtherMonthDay" align="center">10</td><td class="CalOtherMonthDay" align="center">11</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk" type="text">&nbsp;<input onclick="zzk_go()" value="找找看" id="btnZzk" class="btn_my_zzk" type="button"></div>
+<div id="widget_my_google" class="div_my_zzk"><input name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk" type="text">&nbsp;<input onclick="google_go()" value="谷歌搜索" class="btn_my_zzk" type="button"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/Free-Thinker/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/Free-Thinker/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/Free-Thinker/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/Free-Thinker/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/Free-Thinker/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block"></div><div id="sidebar_categories">
+<div id="sidebar_postcategory" class="catListPostCategory sidebar-block">
+<h3 class="catListTitle">随笔分类</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/Free-Thinker/category/541545.html">[转至]农民伯伯(27)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/Free-Thinker/category/510483.html">air-for-android(9)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/Free-Thinker/category/507472.html">android基础(42)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/Free-Thinker/category/691745.html">android开源(12)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/Free-Thinker/category/507473.html">android提高篇(1098)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/Free-Thinker/category/528266.html">android相关问题处理(62)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/Free-Thinker/category/583294.html">C++(4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/Free-Thinker/category/545913.html">C++相关问题处理(2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/Free-Thinker/category/590786.html">Go语言基础篇(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/Free-Thinker/category/661655.html">IOS开发(542)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_10" href="http://www.cnblogs.com/Free-Thinker/category/738298.html">ios开发相关问题解决方案(6)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_11" href="http://www.cnblogs.com/Free-Thinker/category/738296.html">ios综合问题(3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_12" href="http://www.cnblogs.com/Free-Thinker/category/508923.html">javaweb基础(4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_13" href="http://www.cnblogs.com/Free-Thinker/category/507474.html">java基础(12)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_14" href="http://www.cnblogs.com/Free-Thinker/category/507475.html">java提高篇(139)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_15" href="http://www.cnblogs.com/Free-Thinker/category/568676.html">js(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_16" href="http://www.cnblogs.com/Free-Thinker/category/567536.html">Linux(4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_17" href="http://www.cnblogs.com/Free-Thinker/category/880198.html">mac(2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_18" href="http://www.cnblogs.com/Free-Thinker/category/738295.html">object-c(353)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_19" href="http://www.cnblogs.com/Free-Thinker/category/566668.html">Redis(15)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_20" href="http://www.cnblogs.com/Free-Thinker/category/738294.html">Swift语言(586)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_21" href="http://www.cnblogs.com/Free-Thinker/category/578427.html">技术性常识(11)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_22" href="http://www.cnblogs.com/Free-Thinker/category/512830.html">开发工具相关(8)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_23" href="http://www.cnblogs.com/Free-Thinker/category/575919.html">设计技巧(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_24" href="http://www.cnblogs.com/Free-Thinker/category/578800.html">生活常识及常见疾病(5)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_25" href="http://www.cnblogs.com/Free-Thinker/category/752614.html">学习网站或博客(10)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_26" href="http://www.cnblogs.com/Free-Thinker/category/575895.html">硬件相关常识(11)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_27" href="http://www.cnblogs.com/Free-Thinker/category/637353.html">转载至罗升阳老师android(90)</a> </li>
+
+</ul>
+
+</div>
+
+<div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+<h3 class="catListTitle">随笔档案</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/Free-Thinker/archive/2017/02.html">2017年2月 (39)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/Free-Thinker/archive/2017/01.html">2017年1月 (6)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/Free-Thinker/archive/2016/12.html">2016年12月 (135)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/Free-Thinker/archive/2016/11.html">2016年11月 (36)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/Free-Thinker/archive/2016/10.html">2016年10月 (58)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/Free-Thinker/archive/2016/09.html">2016年9月 (85)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_6" href="http://www.cnblogs.com/Free-Thinker/archive/2016/08.html">2016年8月 (34)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_7" href="http://www.cnblogs.com/Free-Thinker/archive/2016/07.html">2016年7月 (6)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_8" href="http://www.cnblogs.com/Free-Thinker/archive/2016/06.html">2016年6月 (72)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_9" href="http://www.cnblogs.com/Free-Thinker/archive/2016/05.html">2016年5月 (42)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_10" href="http://www.cnblogs.com/Free-Thinker/archive/2016/04.html">2016年4月 (44)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_11" href="http://www.cnblogs.com/Free-Thinker/archive/2016/03.html">2016年3月 (33)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_12" href="http://www.cnblogs.com/Free-Thinker/archive/2016/02.html">2016年2月 (8)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_13" href="http://www.cnblogs.com/Free-Thinker/archive/2016/01.html">2016年1月 (80)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_14" href="http://www.cnblogs.com/Free-Thinker/archive/2015/12.html">2015年12月 (75)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_15" href="http://www.cnblogs.com/Free-Thinker/archive/2015/11.html">2015年11月 (185)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_16" href="http://www.cnblogs.com/Free-Thinker/archive/2015/10.html">2015年10月 (71)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_17" href="http://www.cnblogs.com/Free-Thinker/archive/2015/09.html">2015年9月 (275)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_18" href="http://www.cnblogs.com/Free-Thinker/archive/2015/08.html">2015年8月 (39)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_19" href="http://www.cnblogs.com/Free-Thinker/archive/2015/07.html">2015年7月 (37)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_20" href="http://www.cnblogs.com/Free-Thinker/archive/2015/06.html">2015年6月 (53)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_21" href="http://www.cnblogs.com/Free-Thinker/archive/2015/05.html">2015年5月 (82)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_22" href="http://www.cnblogs.com/Free-Thinker/archive/2015/04.html">2015年4月 (26)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_23" href="http://www.cnblogs.com/Free-Thinker/archive/2015/03.html">2015年3月 (56)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_24" href="http://www.cnblogs.com/Free-Thinker/archive/2015/02.html">2015年2月 (6)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_25" href="http://www.cnblogs.com/Free-Thinker/archive/2015/01.html">2015年1月 (20)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_26" href="http://www.cnblogs.com/Free-Thinker/archive/2014/12.html">2014年12月 (134)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_27" href="http://www.cnblogs.com/Free-Thinker/archive/2014/11.html">2014年11月 (49)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_28" href="http://www.cnblogs.com/Free-Thinker/archive/2014/10.html">2014年10月 (29)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_29" href="http://www.cnblogs.com/Free-Thinker/archive/2014/09.html">2014年9月 (14)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_30" href="http://www.cnblogs.com/Free-Thinker/archive/2014/08.html">2014年8月 (11)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_31" href="http://www.cnblogs.com/Free-Thinker/archive/2014/07.html">2014年7月 (15)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_32" href="http://www.cnblogs.com/Free-Thinker/archive/2014/06.html">2014年6月 (22)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_33" href="http://www.cnblogs.com/Free-Thinker/archive/2014/05.html">2014年5月 (42)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_34" href="http://www.cnblogs.com/Free-Thinker/archive/2014/04.html">2014年4月 (93)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_35" href="http://www.cnblogs.com/Free-Thinker/archive/2014/03.html">2014年3月 (57)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_36" href="http://www.cnblogs.com/Free-Thinker/archive/2014/02.html">2014年2月 (32)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_37" href="http://www.cnblogs.com/Free-Thinker/archive/2014/01.html">2014年1月 (12)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_38" href="http://www.cnblogs.com/Free-Thinker/archive/2013/12.html">2013年12月 (25)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_39" href="http://www.cnblogs.com/Free-Thinker/archive/2013/11.html">2013年11月 (36)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_40" href="http://www.cnblogs.com/Free-Thinker/archive/2013/10.html">2013年10月 (21)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_41" href="http://www.cnblogs.com/Free-Thinker/archive/2013/09.html">2013年9月 (16)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_42" href="http://www.cnblogs.com/Free-Thinker/archive/2013/08.html">2013年8月 (53)</a> </li>
+
+</ul>
+
+</div>
+
+<div id="sidebar_articlecategory" class="catListArticleCategory sidebar-block">
+<h3 class="catListTitle">文章分类</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_2_Link_0" href="http://www.cnblogs.com/Free-Thinker/category/752320.html">网站</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/Free-Thinker/p/4995074.html#3614676">1. Re:IOS 图片压缩</a></li>
+        <li class="recent_comment_body">可以压缩图片质量和尺寸相结合<br><a href="" target="_blank"></a></li>
+        <li class="recent_comment_author">--Silence_cnblogs</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/Free-Thinker/p/3406281.html#3567484">2. Re:解决 android.support.v7.widget.GridLayout 使用 xmlns:app 出现 error 的问题</a></li>
+        <li class="recent_comment_body">我引用了app这个命名空间但是下面提示我的项目里找不到是什么原因</li>
+        <li class="recent_comment_author">--人余线</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/Free-Thinker/p/4843839.html#3543001">3. Re:Swift - final关键字的介绍，以及使用场景</a></li>
+        <li class="recent_comment_body">final 修饰的属性或者方法不能被子类继承？  <br>你尝试了吗？？？？？</li>
+        <li class="recent_comment_author">--nerd_me</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/Free-Thinker/p/5908487.html#3527644">4. Re:iOS开发：AVPlayer实现流音频边播边存</a></li>
+        <li class="recent_comment_body">博主你好，感谢分享。还有就是想请问一下你有使用过相关的第三方，去实现边下边播功能吗？</li>
+        <li class="recent_comment_author">--kkkore</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/Free-Thinker/p/3684361.html#3517157">5. Re:Android 中 更新视图的函数ondraw() 和dispatchdraw（）的区别</a></li>
+        <li class="recent_comment_body">从view的源码里面看，onDraw和dispatchDraw的调用者都是draw，正常情况下draw中调用顺序是onDraw（绘制自己），然后是dispatchDraw（绘制子view）。我的理解是......</li>
+        <li class="recent_comment_author">--tianyasifan</li>
+</ul>
+</div>
+</div>
+</div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2017 brave-sailor
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+</body></html>

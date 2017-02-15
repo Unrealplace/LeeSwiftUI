@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title>Intel</title>
+        <link type="text/css" rel="stylesheet" href="intel_data/swiper.css">
+        
+        <style>
+            body {
+                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                margin: 0;
+                padding: 0;
+                background-color: #ccc;
+				overflow: hidden;
+            }
+            .swiper-container {
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+            }
+            .swiper-slide img {
+                width: 100%;
+                height: 100%;
+				/*pointer-events: none;*/
+            }
+			.swiper-pagination-bullet{
+                background: #eee; 
+			}
+            .swiper-pagination-bullet-active {
+                background: #fff; 
+            }
+        </style>
+    </head>
+    
+    <body>
+        <!-- Swiper -->
+        <div class="swiper-container swiper-container-horizontal" style="width: 728px; height: 90px;" data-swiper="[object Object]">
+            <div class="swiper-wrapper" style="transform: translate3d(-1516px, 0px, 0px); transition-duration: 0ms;">
+                <div class="swiper-slide" id="kz_ifr_1" style="width: 728px; margin-right: 30px;">
+                <iframe id="dcp,1607439,1665865,4,4232703" scrolling="no" style="border: 0px none; margin: 0px;" height="90" frameborder="0" width="728"></iframe></div>
+                <div class="swiper-slide swiper-slide-prev" id="kz_ifr_2" style="width: 728px; margin-right: 30px;">
+                <iframe id="dcp,1607439,1665865,4,4232702" scrolling="no" style="border: 0px none; margin: 0px;" height="90" frameborder="0" width="728"></iframe></div>
+                <div class="swiper-slide swiper-slide-active" id="kz_ifr_3" style="width: 728px; margin-right: 30px;">
+                <iframe id="dcp,1607439,1665865,4,4232698" scrolling="no" style="border: 0px none; margin: 0px;" height="90" frameborder="0" width="728"></iframe></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+        </div>
+
+        <script src="intel_data/zepto.js">
+        </script>
+        <script src="intel_data/swiper.js">
+        </script>
+        <script type="text/javascript">
+        var url="/?type=js&async=yes&kz_div={kz_div}&click_3p={click_3p}&kz_id={kz_id}&landing_page={landing_page}&t="+(new Date().getTime());
+		var click_3p='';		
+		location.href.replace(/[?#&]click_3p=([^#&]*)/gi,function($1,$2){click_3p=$2;});
+		var size_arr={'960x90':1,'960x60':2,'760x90':3,'728x90':4,'640x60':5,'580x90':6,'500x200':7,'468x60':9,'360x300':11,'336x280':12,'300x250':13,'250x250':14,'200x200':16,'180x150':17,'160x600':18,'125x125':19,'120x600':20,'300x50':27,'640x90':30,'120x270':78,'250x200':91,'300x100':100,'320x100':255,'320x50':288,'610x100':353,'480x70':663,'950x180':1448};
+		var size='300x250';
+		var time=4.5;
+		location.href.replace(/[?#&]time=([^#&]*)/gi,function($1,$2){time=$2;});
+		location.href.replace(/[?#&]size=([^#&]*)/gi,function($1,$2){size=$2;});
+		var size_id=size_arr[size];
+		size=size.split('x');
+		$('.swiper-container').css('width',size[0]+'px').css('height',size[1]+'px');
+
+		var loadCreative=function(kz_div,kz_id,click_3p,landing_page){
+			var js=document.createElement('script');
+			js.src=url.replace(/\{kz_div\}/gi,kz_div).replace(/\{kz_id\}/gi,kz_id).replace(/\{click_3p\}/gi,click_3p).replace(/\{landing_page\}/gi,encodeURIComponent(landing_page));
+			document.body.appendChild(js);
+		}
+
+		loadCreative('kz_ifr_1','1607439,1665865,'+size_id+',4232703',click_3p,'http://nb.zol.com.cn/585/5855232.html');
+		loadCreative('kz_ifr_2','1607439,1665865,'+size_id+',4232702',click_3p,'http://nb.zol.com.cn/590/5903535.html');
+		loadCreative('kz_ifr_3','1607439,1665865,'+size_id+',4232698',click_3p,'http://nb.zol.com.cn/587/5870247_all.html#p5885140');
+
+		$(function() {
+			var swiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				spaceBetween: 30,
+				autoplay: time*1000,
+				autoplayDisableOnInteraction: false
+			});
+			setTimeout(function () {
+				 swiper.stopAutoplay();
+			}, 27000);
+		});
+
+        </script><script src="intel_data/a_003.js"></script><script src="intel_data/a.js"></script><script src="intel_data/a_002.js"></script>
+    
+
+</body></html>
