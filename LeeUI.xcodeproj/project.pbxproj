@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		044E9BC01E53EA2D0074D8AB /* LeeDetailTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9BBF1E53EA2D0074D8AB /* LeeDetailTableVC.swift */; };
+		044E9BC21E5424310074D8AB /* LeeTableHeadAndFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9BC11E5424310074D8AB /* LeeTableHeadAndFooterView.swift */; };
+		044E9BC41E5434B90074D8AB /* LeeCollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9BC31E5434B90074D8AB /* LeeCollectionViewVC.swift */; };
+		044E9BC61E543E080074D8AB /* LeeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9BC51E543E080074D8AB /* LeeCollectionCell.swift */; };
+		044E9BC81E544E3C0074D8AB /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9BC71E544E3C0074D8AB /* CollectionReusableView.swift */; };
+		044E9BCA1E5467FC0074D8AB /* LeeCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9BC91E5467FC0074D8AB /* LeeCollectionFlowLayout.swift */; };
+		04EA93B31E52A1910020EECD /* LeeUITextFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA93B21E52A1910020EECD /* LeeUITextFieldVC.swift */; };
+		04EA93B51E52D6B20020EECD /* LeeUIButtunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA93B41E52D6B20020EECD /* LeeUIButtunVC.swift */; };
+		04EA93B71E52DD640020EECD /* 屏幕快照 2017-02-14 13.00.59.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EA93B61E52DD640020EECD /* 屏幕快照 2017-02-14 13.00.59.png */; };
+		04EA93B91E52E2560020EECD /* LeeUITableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA93B81E52E2560020EECD /* LeeUITableViewVC.swift */; };
+		04EA93BB1E531B3A0020EECD /* LeeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA93BA1E531B3A0020EECD /* LeeTableCell.swift */; };
+		04EA93BD1E531CD50020EECD /* LeeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA93BC1E531CD50020EECD /* LeeDataModel.swift */; };
+		04F31CAB1E5144DA004CC84F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CAA1E5144DA004CC84F /* AppDelegate.swift */; };
+		04F31CAD1E5144DA004CC84F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CAC1E5144DA004CC84F /* ViewController.swift */; };
+		04F31CB01E5144DA004CC84F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F31CAE1E5144DA004CC84F /* Main.storyboard */; };
+		04F31CB21E5144DA004CC84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F31CB11E5144DA004CC84F /* Assets.xcassets */; };
+		04F31CB51E5144DA004CC84F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F31CB31E5144DA004CC84F /* LaunchScreen.storyboard */; };
+		04F31CC01E5144DA004CC84F /* LeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CBF1E5144DA004CC84F /* LeeUITests.swift */; };
+		04F31CCB1E5144DA004CC84F /* LeeUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CCA1E5144DA004CC84F /* LeeUIUITests.swift */; };
+		04F31CD91E51636D004CC84F /* LeeBVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CD81E51636D004CC84F /* LeeBVC.swift */; };
+		04F31CDB1E51737C004CC84F /* LeeWindowAndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CDA1E51737C004CC84F /* LeeWindowAndView.swift */; };
+		04F31CDD1E517E36004CC84F /* LeeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CDC1E517E36004CC84F /* LeeBaseViewController.swift */; };
+		04F31CDF1E518891004CC84F /* LeeUILabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CDE1E518891004CC84F /* LeeUILabelVC.swift */; };
+		04F31CE11E519B9D004CC84F /* LeeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CE01E519B9D004CC84F /* LeeString.swift */; };
+		04F31CE31E51BF90004CC84F /* LeeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CE21E51BF90004CC84F /* LeeLabel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04F31CBC1E5144DA004CC84F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04F31C9F1E5144DA004CC84F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04F31CA61E5144DA004CC84F;
+			remoteInfo = LeeUI;
+		};
+		04F31CC71E5144DA004CC84F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04F31C9F1E5144DA004CC84F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04F31CA61E5144DA004CC84F;
+			remoteInfo = LeeUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		044E9BBF1E53EA2D0074D8AB /* LeeDetailTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeDetailTableVC.swift; sourceTree = "<group>"; };
+		044E9BC11E5424310074D8AB /* LeeTableHeadAndFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeTableHeadAndFooterView.swift; sourceTree = "<group>"; };
+		044E9BC31E5434B90074D8AB /* LeeCollectionViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeCollectionViewVC.swift; sourceTree = "<group>"; };
+		044E9BC51E543E080074D8AB /* LeeCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeCollectionCell.swift; sourceTree = "<group>"; };
+		044E9BC71E544E3C0074D8AB /* CollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
+		044E9BC91E5467FC0074D8AB /* LeeCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		04EA93B21E52A1910020EECD /* LeeUITextFieldVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeUITextFieldVC.swift; sourceTree = "<group>"; };
+		04EA93B41E52D6B20020EECD /* LeeUIButtunVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeUIButtunVC.swift; sourceTree = "<group>"; };
+		04EA93B61E52DD640020EECD /* 屏幕快照 2017-02-14 13.00.59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "屏幕快照 2017-02-14 13.00.59.png"; path = "../屏幕快照 2017-02-14 13.00.59.png"; sourceTree = "<group>"; };
+		04EA93B81E52E2560020EECD /* LeeUITableViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeUITableViewVC.swift; sourceTree = "<group>"; };
+		04EA93BA1E531B3A0020EECD /* LeeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeTableCell.swift; sourceTree = "<group>"; };
+		04EA93BC1E531CD50020EECD /* LeeDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeDataModel.swift; sourceTree = "<group>"; };
+		04F31CA71E5144DA004CC84F /* LeeUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeeUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F31CAA1E5144DA004CC84F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04F31CAC1E5144DA004CC84F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04F31CAF1E5144DA004CC84F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04F31CB11E5144DA004CC84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04F31CB41E5144DA004CC84F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04F31CB61E5144DA004CC84F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F31CBB1E5144DA004CC84F /* LeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F31CBF1E5144DA004CC84F /* LeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeeUITests.swift; sourceTree = "<group>"; };
+		04F31CC11E5144DA004CC84F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F31CC61E5144DA004CC84F /* LeeUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeeUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F31CCA1E5144DA004CC84F /* LeeUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeeUIUITests.swift; sourceTree = "<group>"; };
+		04F31CCC1E5144DA004CC84F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F31CD81E51636D004CC84F /* LeeBVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeBVC.swift; sourceTree = "<group>"; };
+		04F31CDA1E51737C004CC84F /* LeeWindowAndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeWindowAndView.swift; sourceTree = "<group>"; };
+		04F31CDC1E517E36004CC84F /* LeeBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeBaseViewController.swift; sourceTree = "<group>"; };
+		04F31CDE1E518891004CC84F /* LeeUILabelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeUILabelVC.swift; sourceTree = "<group>"; };
+		04F31CE01E519B9D004CC84F /* LeeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeString.swift; sourceTree = "<group>"; };
+		04F31CE21E51BF90004CC84F /* LeeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeLabel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04F31CA41E5144DA004CC84F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04F31CB81E5144DA004CC84F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04F31CC31E5144DA004CC84F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04F31C9E1E5144DA004CC84F = {
+			isa = PBXGroup;
+			children = (
+				04F31CA91E5144DA004CC84F /* LeeUI */,
+				04F31CBE1E5144DA004CC84F /* LeeUITests */,
+				04F31CC91E5144DA004CC84F /* LeeUIUITests */,
+				04F31CA81E5144DA004CC84F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04F31CA81E5144DA004CC84F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04F31CA71E5144DA004CC84F /* LeeUI.app */,
+				04F31CBB1E5144DA004CC84F /* LeeUITests.xctest */,
+				04F31CC61E5144DA004CC84F /* LeeUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04F31CA91E5144DA004CC84F /* LeeUI */ = {
+			isa = PBXGroup;
+			children = (
+				04F31CAA1E5144DA004CC84F /* AppDelegate.swift */,
+				04F31CAC1E5144DA004CC84F /* ViewController.swift */,
+				04F31CDA1E51737C004CC84F /* LeeWindowAndView.swift */,
+				04F31CDC1E517E36004CC84F /* LeeBaseViewController.swift */,
+				04F31CDE1E518891004CC84F /* LeeUILabelVC.swift */,
+				04EA93B21E52A1910020EECD /* LeeUITextFieldVC.swift */,
+				04EA93B41E52D6B20020EECD /* LeeUIButtunVC.swift */,
+				04EA93B81E52E2560020EECD /* LeeUITableViewVC.swift */,
+				044E9BBF1E53EA2D0074D8AB /* LeeDetailTableVC.swift */,
+				04EA93BA1E531B3A0020EECD /* LeeTableCell.swift */,
+				044E9BC11E5424310074D8AB /* LeeTableHeadAndFooterView.swift */,
+				044E9BC31E5434B90074D8AB /* LeeCollectionViewVC.swift */,
+				044E9BC91E5467FC0074D8AB /* LeeCollectionFlowLayout.swift */,
+				044E9BC51E543E080074D8AB /* LeeCollectionCell.swift */,
+				044E9BC71E544E3C0074D8AB /* CollectionReusableView.swift */,
+				04EA93BC1E531CD50020EECD /* LeeDataModel.swift */,
+				04F31CE21E51BF90004CC84F /* LeeLabel.swift */,
+				04F31CE01E519B9D004CC84F /* LeeString.swift */,
+				04F31CD81E51636D004CC84F /* LeeBVC.swift */,
+				04F31CAE1E5144DA004CC84F /* Main.storyboard */,
+				04F31CB11E5144DA004CC84F /* Assets.xcassets */,
+				04EA93B61E52DD640020EECD /* 屏幕快照 2017-02-14 13.00.59.png */,
+				04F31CB31E5144DA004CC84F /* LaunchScreen.storyboard */,
+				04F31CB61E5144DA004CC84F /* Info.plist */,
+			);
+			path = LeeUI;
+			sourceTree = "<group>";
+		};
+		04F31CBE1E5144DA004CC84F /* LeeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04F31CBF1E5144DA004CC84F /* LeeUITests.swift */,
+				04F31CC11E5144DA004CC84F /* Info.plist */,
+			);
+			path = LeeUITests;
+			sourceTree = "<group>";
+		};
+		04F31CC91E5144DA004CC84F /* LeeUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04F31CCA1E5144DA004CC84F /* LeeUIUITests.swift */,
+				04F31CCC1E5144DA004CC84F /* Info.plist */,
+			);
+			path = LeeUIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04F31CA61E5144DA004CC84F /* LeeUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04F31CCF1E5144DA004CC84F /* Build configuration list for PBXNativeTarget "LeeUI" */;
+			buildPhases = (
+				04F31CA31E5144DA004CC84F /* Sources */,
+				04F31CA41E5144DA004CC84F /* Frameworks */,
+				04F31CA51E5144DA004CC84F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeeUI;
+			productName = LeeUI;
+			productReference = 04F31CA71E5144DA004CC84F /* LeeUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04F31CBA1E5144DA004CC84F /* LeeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04F31CD21E5144DA004CC84F /* Build configuration list for PBXNativeTarget "LeeUITests" */;
+			buildPhases = (
+				04F31CB71E5144DA004CC84F /* Sources */,
+				04F31CB81E5144DA004CC84F /* Frameworks */,
+				04F31CB91E5144DA004CC84F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04F31CBD1E5144DA004CC84F /* PBXTargetDependency */,
+			);
+			name = LeeUITests;
+			productName = LeeUITests;
+			productReference = 04F31CBB1E5144DA004CC84F /* LeeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04F31CC51E5144DA004CC84F /* LeeUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04F31CD51E5144DA004CC84F /* Build configuration list for PBXNativeTarget "LeeUIUITests" */;
+			buildPhases = (
+				04F31CC21E5144DA004CC84F /* Sources */,
+				04F31CC31E5144DA004CC84F /* Frameworks */,
+				04F31CC41E5144DA004CC84F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04F31CC81E5144DA004CC84F /* PBXTargetDependency */,
+			);
+			name = LeeUIUITests;
+			productName = LeeUIUITests;
+			productReference = 04F31CC61E5144DA004CC84F /* LeeUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04F31C9F1E5144DA004CC84F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "https://github.com/Unrealplace";
+				TargetAttributes = {
+					04F31CA61E5144DA004CC84F = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					04F31CBA1E5144DA004CC84F = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 04F31CA61E5144DA004CC84F;
+					};
+					04F31CC51E5144DA004CC84F = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 04F31CA61E5144DA004CC84F;
+					};
+				};
+			};
+			buildConfigurationList = 04F31CA21E5144DA004CC84F /* Build configuration list for PBXProject "LeeUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04F31C9E1E5144DA004CC84F;
+			productRefGroup = 04F31CA81E5144DA004CC84F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04F31CA61E5144DA004CC84F /* LeeUI */,
+				04F31CBA1E5144DA004CC84F /* LeeUITests */,
+				04F31CC51E5144DA004CC84F /* LeeUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04F31CA51E5144DA004CC84F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F31CB51E5144DA004CC84F /* LaunchScreen.storyboard in Resources */,
+				04F31CB21E5144DA004CC84F /* Assets.xcassets in Resources */,
+				04EA93B71E52DD640020EECD /* 屏幕快照 2017-02-14 13.00.59.png in Resources */,
+				04F31CB01E5144DA004CC84F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04F31CB91E5144DA004CC84F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04F31CC41E5144DA004CC84F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04F31CA31E5144DA004CC84F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F31CAD1E5144DA004CC84F /* ViewController.swift in Sources */,
+				044E9BCA1E5467FC0074D8AB /* LeeCollectionFlowLayout.swift in Sources */,
+				044E9BC01E53EA2D0074D8AB /* LeeDetailTableVC.swift in Sources */,
+				04F31CDB1E51737C004CC84F /* LeeWindowAndView.swift in Sources */,
+				04F31CDF1E518891004CC84F /* LeeUILabelVC.swift in Sources */,
+				04F31CDD1E517E36004CC84F /* LeeBaseViewController.swift in Sources */,
+				04EA93BD1E531CD50020EECD /* LeeDataModel.swift in Sources */,
+				04EA93B31E52A1910020EECD /* LeeUITextFieldVC.swift in Sources */,
+				044E9BC21E5424310074D8AB /* LeeTableHeadAndFooterView.swift in Sources */,
+				04F31CAB1E5144DA004CC84F /* AppDelegate.swift in Sources */,
+				044E9BC81E544E3C0074D8AB /* CollectionReusableView.swift in Sources */,
+				04F31CD91E51636D004CC84F /* LeeBVC.swift in Sources */,
+				044E9BC41E5434B90074D8AB /* LeeCollectionViewVC.swift in Sources */,
+				04EA93BB1E531B3A0020EECD /* LeeTableCell.swift in Sources */,
+				044E9BC61E543E080074D8AB /* LeeCollectionCell.swift in Sources */,
+				04F31CE11E519B9D004CC84F /* LeeString.swift in Sources */,
+				04F31CE31E51BF90004CC84F /* LeeLabel.swift in Sources */,
+				04EA93B51E52D6B20020EECD /* LeeUIButtunVC.swift in Sources */,
+				04EA93B91E52E2560020EECD /* LeeUITableViewVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04F31CB71E5144DA004CC84F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F31CC01E5144DA004CC84F /* LeeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04F31CC21E5144DA004CC84F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F31CCB1E5144DA004CC84F /* LeeUIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04F31CBD1E5144DA004CC84F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04F31CA61E5144DA004CC84F /* LeeUI */;
+			targetProxy = 04F31CBC1E5144DA004CC84F /* PBXContainerItemProxy */;
+		};
+		04F31CC81E5144DA004CC84F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04F31CA61E5144DA004CC84F /* LeeUI */;
+			targetProxy = 04F31CC71E5144DA004CC84F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04F31CAE1E5144DA004CC84F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04F31CAF1E5144DA004CC84F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04F31CB31E5144DA004CC84F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04F31CB41E5144DA004CC84F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04F31CCD1E5144DA004CC84F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04F31CCE1E5144DA004CC84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04F31CD01E5144DA004CC84F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LeeUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitianyingye.LeeUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		04F31CD11E5144DA004CC84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LeeUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitianyingye.LeeUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		04F31CD31E5144DA004CC84F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LeeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitianyingye.LeeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeeUI.app/LeeUI";
+			};
+			name = Debug;
+		};
+		04F31CD41E5144DA004CC84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LeeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitianyingye.LeeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeeUI.app/LeeUI";
+			};
+			name = Release;
+		};
+		04F31CD61E5144DA004CC84F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LeeUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitianyingye.LeeUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LeeUI;
+			};
+			name = Debug;
+		};
+		04F31CD71E5144DA004CC84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LeeUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitianyingye.LeeUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LeeUI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04F31CA21E5144DA004CC84F /* Build configuration list for PBXProject "LeeUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04F31CCD1E5144DA004CC84F /* Debug */,
+				04F31CCE1E5144DA004CC84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04F31CCF1E5144DA004CC84F /* Build configuration list for PBXNativeTarget "LeeUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04F31CD01E5144DA004CC84F /* Debug */,
+				04F31CD11E5144DA004CC84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04F31CD21E5144DA004CC84F /* Build configuration list for PBXNativeTarget "LeeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04F31CD31E5144DA004CC84F /* Debug */,
+				04F31CD41E5144DA004CC84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04F31CD51E5144DA004CC84F /* Build configuration list for PBXNativeTarget "LeeUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04F31CD61E5144DA004CC84F /* Debug */,
+				04F31CD71E5144DA004CC84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04F31C9F1E5144DA004CC84F /* Project object */;
+}
