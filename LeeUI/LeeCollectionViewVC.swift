@@ -68,14 +68,9 @@ class LeeCollectionViewVC: UIViewController,UICollectionViewDataSource,UICollect
    lazy var showCollectionView:UICollectionView = {
     
     // layout 很重要  可以布局 item 也可以布局 头尾部
-    let layout = UICollectionViewFlowLayout()
-    layout.itemSize = CGSize(width:100,height:150)
-    //列间距,行间距,偏移
-    layout.minimumInteritemSpacing = 15
-    layout.minimumLineSpacing = 30
-    layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
-    layout.headerReferenceSize = CGSize(width:375,height:60)
-    layout.footerReferenceSize = CGSize(width:375,height:80)
+   // let layout = LeeCollectionFlowLayout()
+    
+    let layout = LeeLineFlowLayout()
     
     
     let collectionView:UICollectionView = UICollectionView.init(frame:CGRect(x:0,y:0,width:self.view.bounds.width,height:self.view.bounds.height), collectionViewLayout: layout)
@@ -85,7 +80,6 @@ class LeeCollectionViewVC: UIViewController,UICollectionViewDataSource,UICollect
     collectionView.backgroundColor = UIColor.white
     collectionView.register(LeeCollectionCell.self, forCellWithReuseIdentifier: "cellid")
     collectionView.register(CollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "header")
-    
     collectionView.register(CollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footer")
     collectionView.showsVerticalScrollIndicator = true
     collectionView.showsHorizontalScrollIndicator = false

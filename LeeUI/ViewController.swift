@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     var showTableView:UITableView?
-    var listArr = ["LeeWindowAndView","LeeUILabelVC","LeeUITextFieldVC","LeeUIButtunVC","LeeUITableViewVC","LeeCollectionViewVC"]
+    var listArr = ["LeeWindowAndView","LeeUILabelVC","LeeUITextFieldVC","LeeUIButtunVC","LeeUITableViewVC","LeeCollectionViewVC","LeeOhterUI","LeeReadAndWriterDataVC"]
     
     
     
@@ -92,6 +92,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             
         case 5:
             let vc = LeeCollectionViewVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+            break;
+            
+        case 6:
+            let vc = LeeOhterUI()
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+            break;
+            
+        case 7:
+            let vc = LeeReadAndWriterDataVC()
             self.navigationController?.pushViewController(vc, animated: true)
             
             break;

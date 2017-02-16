@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041785AF1E5543D000A223F1 /* LeeLineFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041785AE1E5543D000A223F1 /* LeeLineFlowLayout.swift */; };
+		041785B11E55556F00A223F1 /* LeeOhterUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041785B01E55556F00A223F1 /* LeeOhterUI.swift */; };
+		041785B31E5593FB00A223F1 /* LeeReadAndWriterDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041785B21E5593FB00A223F1 /* LeeReadAndWriterDataVC.swift */; };
+		041785B51E55984C00A223F1 /* LeeUserDefaultandArchiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041785B41E55984C00A223F1 /* LeeUserDefaultandArchiveVC.swift */; };
+		041785B71E55AAD200A223F1 /* LeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041785B61E55AAD200A223F1 /* LeeModel.swift */; };
+		041785B91E55BE9500A223F1 /* LeeFileOperationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041785B81E55BE9500A223F1 /* LeeFileOperationVC.swift */; };
 		044E9BC01E53EA2D0074D8AB /* LeeDetailTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9BBF1E53EA2D0074D8AB /* LeeDetailTableVC.swift */; };
 		044E9BC21E5424310074D8AB /* LeeTableHeadAndFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9BC11E5424310074D8AB /* LeeTableHeadAndFooterView.swift */; };
 		044E9BC41E5434B90074D8AB /* LeeCollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9BC31E5434B90074D8AB /* LeeCollectionViewVC.swift */; };
@@ -52,6 +58,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041785AE1E5543D000A223F1 /* LeeLineFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeLineFlowLayout.swift; sourceTree = "<group>"; };
+		041785B01E55556F00A223F1 /* LeeOhterUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeOhterUI.swift; sourceTree = "<group>"; };
+		041785B21E5593FB00A223F1 /* LeeReadAndWriterDataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeReadAndWriterDataVC.swift; sourceTree = "<group>"; };
+		041785B41E55984C00A223F1 /* LeeUserDefaultandArchiveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeUserDefaultandArchiveVC.swift; sourceTree = "<group>"; };
+		041785B61E55AAD200A223F1 /* LeeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeModel.swift; sourceTree = "<group>"; };
+		041785B81E55BE9500A223F1 /* LeeFileOperationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeFileOperationVC.swift; sourceTree = "<group>"; };
 		044E9BBF1E53EA2D0074D8AB /* LeeDetailTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeDetailTableVC.swift; sourceTree = "<group>"; };
 		044E9BC11E5424310074D8AB /* LeeTableHeadAndFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeTableHeadAndFooterView.swift; sourceTree = "<group>"; };
 		044E9BC31E5434B90074D8AB /* LeeCollectionViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeCollectionViewVC.swift; sourceTree = "<group>"; };
@@ -146,6 +158,12 @@
 				044E9BC11E5424310074D8AB /* LeeTableHeadAndFooterView.swift */,
 				044E9BC31E5434B90074D8AB /* LeeCollectionViewVC.swift */,
 				044E9BC91E5467FC0074D8AB /* LeeCollectionFlowLayout.swift */,
+				041785AE1E5543D000A223F1 /* LeeLineFlowLayout.swift */,
+				041785B01E55556F00A223F1 /* LeeOhterUI.swift */,
+				041785B21E5593FB00A223F1 /* LeeReadAndWriterDataVC.swift */,
+				041785B41E55984C00A223F1 /* LeeUserDefaultandArchiveVC.swift */,
+				041785B81E55BE9500A223F1 /* LeeFileOperationVC.swift */,
+				041785B61E55AAD200A223F1 /* LeeModel.swift */,
 				044E9BC51E543E080074D8AB /* LeeCollectionCell.swift */,
 				044E9BC71E544E3C0074D8AB /* CollectionReusableView.swift */,
 				04EA93BC1E531CD50020EECD /* LeeDataModel.swift */,
@@ -315,7 +333,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F31CAD1E5144DA004CC84F /* ViewController.swift in Sources */,
+				041785B11E55556F00A223F1 /* LeeOhterUI.swift in Sources */,
 				044E9BCA1E5467FC0074D8AB /* LeeCollectionFlowLayout.swift in Sources */,
+				041785AF1E5543D000A223F1 /* LeeLineFlowLayout.swift in Sources */,
+				041785B31E5593FB00A223F1 /* LeeReadAndWriterDataVC.swift in Sources */,
 				044E9BC01E53EA2D0074D8AB /* LeeDetailTableVC.swift in Sources */,
 				04F31CDB1E51737C004CC84F /* LeeWindowAndView.swift in Sources */,
 				04F31CDF1E518891004CC84F /* LeeUILabelVC.swift in Sources */,
@@ -324,8 +345,10 @@
 				04EA93B31E52A1910020EECD /* LeeUITextFieldVC.swift in Sources */,
 				044E9BC21E5424310074D8AB /* LeeTableHeadAndFooterView.swift in Sources */,
 				04F31CAB1E5144DA004CC84F /* AppDelegate.swift in Sources */,
+				041785B51E55984C00A223F1 /* LeeUserDefaultandArchiveVC.swift in Sources */,
 				044E9BC81E544E3C0074D8AB /* CollectionReusableView.swift in Sources */,
 				04F31CD91E51636D004CC84F /* LeeBVC.swift in Sources */,
+				041785B71E55AAD200A223F1 /* LeeModel.swift in Sources */,
 				044E9BC41E5434B90074D8AB /* LeeCollectionViewVC.swift in Sources */,
 				04EA93BB1E531B3A0020EECD /* LeeTableCell.swift in Sources */,
 				044E9BC61E543E080074D8AB /* LeeCollectionCell.swift in Sources */,
@@ -333,6 +356,7 @@
 				04F31CE31E51BF90004CC84F /* LeeLabel.swift in Sources */,
 				04EA93B51E52D6B20020EECD /* LeeUIButtunVC.swift in Sources */,
 				04EA93B91E52E2560020EECD /* LeeUITableViewVC.swift in Sources */,
+				041785B91E55BE9500A223F1 /* LeeFileOperationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

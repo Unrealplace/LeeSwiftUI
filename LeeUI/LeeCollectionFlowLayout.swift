@@ -16,12 +16,18 @@ class LeeCollectionFlowLayout: UICollectionViewFlowLayout {
     override init() {
         super.init()
         
+        // 布局相关的操作都可以放到这里来进行
         //设置每一个元素的大小
-        self.itemSize = CGSize(width:itemW, height:itemH)
+        self.itemSize = CGSize(width:100,height:150)
         //设置滚动方向
-        self.scrollDirection = .horizontal
-        //设置间距
-        self.minimumLineSpacing = 0.7 * itemW
+        self.scrollDirection = .vertical
+        //列间距,行间距,偏移
+        self.minimumInteritemSpacing = 15
+        self.minimumLineSpacing = 30
+        self.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        self.headerReferenceSize = CGSize(width:375,height:60)
+        self.footerReferenceSize = CGSize(width:375,height:80)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,8 +37,8 @@ class LeeCollectionFlowLayout: UICollectionViewFlowLayout {
     //苹果推荐，对一些布局的准备操作放在这里
     override func prepare() {
         //设置边距(让第一张图片与最后一张图片出现在最中央)ps:这里可以进行优化
-        let inset = (self.collectionView?.bounds.width ?? 0)  * 0.5 - self.itemSize.width * 0.5
-        self.sectionInset = UIEdgeInsetsMake(0, inset, 0, inset)
+//        let inset = (self.collectionView?.bounds.width ?? 0)  * 0.5 - self.itemSize.width * 0.5
+//        self.sectionInset = UIEdgeInsetsMake(0, inset, 0, inset)
     }
     
     

@@ -33,10 +33,8 @@ class LeeCollectionCell: UICollectionViewCell {
    private func leeSetUI() {
     
 
-        imageV = UIImageView.init(frame: CGRect(x:0,y:0,width:100,height:120))
-        
-        title  = UILabel.init(frame: CGRect(x:0,y:(imageV?.bounds.maxY)!,width:100,height:30))
-    
+    imageV = UIImageView()
+    title  = UILabel()
     let tap = UITapGestureRecognizer()
     tap.numberOfTapsRequired = 1
     tap.addTarget(self, action: #selector(self.imageClick(tap:)))
@@ -60,6 +58,16 @@ class LeeCollectionCell: UICollectionViewCell {
         if (self.imageClickBlock != nil) {
             self.imageClickBlock!(path!)
         }
+        
+    }
+    
+    override func layoutSubviews() {
+         super.layoutSubviews()
+        
+        imageV?.frame = CGRect(x:0,y:0,width:self.bounds.size.width,height:self.bounds.size.height - 30)
+        title?.frame  = CGRect(x:0,y:(imageV?.bounds.maxY)!,width:self.bounds.size.width,height:30)
+        
+        
         
     }
     
