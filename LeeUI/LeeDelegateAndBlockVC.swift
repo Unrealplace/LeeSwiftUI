@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LeeDelegateAndBlockVC: LeeBVC {
+class LeeDelegateAndBlockVC: LeeBVC,touchViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,13 @@ class LeeDelegateAndBlockVC: LeeBVC {
         let testView = LeeBlockTestView.init(frame: CGRect.init(x: 100, y: 100, width: 230, height: 180))
         
         self.view.addSubview(testView)
+        
+        let  delegateView = LeeDelegateView.init(frame: CGRect.init(x: 100, y: 350, width: 230, height: 180))
+        
+        delegateView.delegate = self
+        
+        self.view.addSubview(delegateView)
+        
         
         testView.blockVoid = {() ->() in
         
@@ -117,7 +124,17 @@ class LeeDelegateAndBlockVC: LeeBVC {
             return sumrsult
         })
         
+    }
+    
+    
+    func leeChangeColor(color:UIColor) -> String{
+        
+        self.view.backgroundColor = color
+        
+        return "oliver lee"
+        
         
     }
-
+    
+    
 }

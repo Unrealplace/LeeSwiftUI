@@ -44,6 +44,10 @@
 		04FB19971E56F4E40078E22D /* LeeDataManager.c in Sources */ = {isa = PBXBuildFile; fileRef = 04FB19951E56F4E40078E22D /* LeeDataManager.c */; };
 		04FB19991E56FCC40078E22D /* LeeDelegateAndBlockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB19981E56FCC40078E22D /* LeeDelegateAndBlockVC.swift */; };
 		04FB199B1E5703020078E22D /* LeeBlockTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB199A1E5703020078E22D /* LeeBlockTestView.swift */; };
+		B6B234F41E573A7A0077DA5B /* LeeDelegateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B234F31E573A7A0077DA5B /* LeeDelegateView.swift */; };
+		B6B234F61E5748DC0077DA5B /* LeeProtol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B234F51E5748DC0077DA5B /* LeeProtol.swift */; };
+		B6B234F81E57495E0077DA5B /* LeePersonA.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B234F71E57495E0077DA5B /* LeePersonA.swift */; };
+		B6B234FA1E5749D70077DA5B /* LeePersonB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B234F91E5749D70077DA5B /* LeePersonB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +114,10 @@
 		04FB19961E56F4E40078E22D /* LeeDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeeDataManager.h; sourceTree = "<group>"; };
 		04FB19981E56FCC40078E22D /* LeeDelegateAndBlockVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeDelegateAndBlockVC.swift; sourceTree = "<group>"; };
 		04FB199A1E5703020078E22D /* LeeBlockTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeBlockTestView.swift; sourceTree = "<group>"; };
+		B6B234F31E573A7A0077DA5B /* LeeDelegateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeDelegateView.swift; sourceTree = "<group>"; };
+		B6B234F51E5748DC0077DA5B /* LeeProtol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeProtol.swift; sourceTree = "<group>"; };
+		B6B234F71E57495E0077DA5B /* LeePersonA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeePersonA.swift; sourceTree = "<group>"; };
+		B6B234F91E5749D70077DA5B /* LeePersonB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeePersonB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +200,10 @@
 				04F31CE01E519B9D004CC84F /* LeeString.swift */,
 				04F31CD81E51636D004CC84F /* LeeBVC.swift */,
 				04FB19981E56FCC40078E22D /* LeeDelegateAndBlockVC.swift */,
+				B6B234F31E573A7A0077DA5B /* LeeDelegateView.swift */,
+				B6B234F51E5748DC0077DA5B /* LeeProtol.swift */,
+				B6B234F71E57495E0077DA5B /* LeePersonA.swift */,
+				B6B234F91E5749D70077DA5B /* LeePersonB.swift */,
 				04FB199A1E5703020078E22D /* LeeBlockTestView.swift */,
 				04F31CAE1E5144DA004CC84F /* Main.storyboard */,
 				04F31CB11E5144DA004CC84F /* Assets.xcassets */,
@@ -372,6 +384,7 @@
 				04F31CAD1E5144DA004CC84F /* ViewController.swift in Sources */,
 				041785B11E55556F00A223F1 /* LeeOhterUI.swift in Sources */,
 				044E9BCA1E5467FC0074D8AB /* LeeCollectionFlowLayout.swift in Sources */,
+				B6B234F61E5748DC0077DA5B /* LeeProtol.swift in Sources */,
 				041785AF1E5543D000A223F1 /* LeeLineFlowLayout.swift in Sources */,
 				041785B31E5593FB00A223F1 /* LeeReadAndWriterDataVC.swift in Sources */,
 				044E9BC01E53EA2D0074D8AB /* LeeDetailTableVC.swift in Sources */,
@@ -385,12 +398,15 @@
 				041785B51E55984C00A223F1 /* LeeUserDefaultandArchiveVC.swift in Sources */,
 				044E9BC81E544E3C0074D8AB /* CollectionReusableView.swift in Sources */,
 				04F31CD91E51636D004CC84F /* LeeBVC.swift in Sources */,
+				B6B234F81E57495E0077DA5B /* LeePersonA.swift in Sources */,
 				041785B71E55AAD200A223F1 /* LeeModel.swift in Sources */,
 				044E9BC41E5434B90074D8AB /* LeeCollectionViewVC.swift in Sources */,
 				04EA93BB1E531B3A0020EECD /* LeeTableCell.swift in Sources */,
+				B6B234F41E573A7A0077DA5B /* LeeDelegateView.swift in Sources */,
 				044E9BC61E543E080074D8AB /* LeeCollectionCell.swift in Sources */,
 				04FB199B1E5703020078E22D /* LeeBlockTestView.swift in Sources */,
 				04F31CE11E519B9D004CC84F /* LeeString.swift in Sources */,
+				B6B234FA1E5749D70077DA5B /* LeePersonB.swift in Sources */,
 				04FB19871E56E92D0078E22D /* LeeSQLite3VC.swift in Sources */,
 				04F31CE31E51BF90004CC84F /* LeeLabel.swift in Sources */,
 				04EA93B51E52D6B20020EECD /* LeeUIButtunVC.swift in Sources */,
