@@ -38,6 +38,10 @@
 		04F31CDF1E518891004CC84F /* LeeUILabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CDE1E518891004CC84F /* LeeUILabelVC.swift */; };
 		04F31CE11E519B9D004CC84F /* LeeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CE01E519B9D004CC84F /* LeeString.swift */; };
 		04F31CE31E51BF90004CC84F /* LeeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31CE21E51BF90004CC84F /* LeeLabel.swift */; };
+		04FB19871E56E92D0078E22D /* LeeSQLite3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB19861E56E92D0078E22D /* LeeSQLite3VC.swift */; };
+		04FB19891E56F2E50078E22D /* LeeDataTest.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 04FB19881E56F2E50078E22D /* LeeDataTest.sqlite */; };
+		04FB198C1E56F30B0078E22D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FB198B1E56F30B0078E22D /* libsqlite3.0.tbd */; };
+		04FB19971E56F4E40078E22D /* LeeDataManager.c in Sources */ = {isa = PBXBuildFile; fileRef = 04FB19951E56F4E40078E22D /* LeeDataManager.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,13 @@
 		04F31CDE1E518891004CC84F /* LeeUILabelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeUILabelVC.swift; sourceTree = "<group>"; };
 		04F31CE01E519B9D004CC84F /* LeeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeString.swift; sourceTree = "<group>"; };
 		04F31CE21E51BF90004CC84F /* LeeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeLabel.swift; sourceTree = "<group>"; };
+		04FB19861E56E92D0078E22D /* LeeSQLite3VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeeSQLite3VC.swift; sourceTree = "<group>"; };
+		04FB19881E56F2E50078E22D /* LeeDataTest.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeeDataTest.sqlite; sourceTree = "<group>"; };
+		04FB198B1E56F30B0078E22D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		04FB198D1E56F3580078E22D /* LeeUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeeUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		04FB19941E56F4E40078E22D /* LeeUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeeUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		04FB19951E56F4E40078E22D /* LeeDataManager.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LeeDataManager.c; sourceTree = "<group>"; };
+		04FB19961E56F4E40078E22D /* LeeDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeeDataManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FB198C1E56F30B0078E22D /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +141,7 @@
 				04F31CBE1E5144DA004CC84F /* LeeUITests */,
 				04F31CC91E5144DA004CC84F /* LeeUIUITests */,
 				04F31CA81E5144DA004CC84F /* Products */,
+				04FB198A1E56F30A0078E22D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +158,9 @@
 		04F31CA91E5144DA004CC84F /* LeeUI */ = {
 			isa = PBXGroup;
 			children = (
+				04FB19881E56F2E50078E22D /* LeeDataTest.sqlite */,
+				04FB19951E56F4E40078E22D /* LeeDataManager.c */,
+				04FB19961E56F4E40078E22D /* LeeDataManager.h */,
 				04F31CAA1E5144DA004CC84F /* AppDelegate.swift */,
 				04F31CAC1E5144DA004CC84F /* ViewController.swift */,
 				04F31CDA1E51737C004CC84F /* LeeWindowAndView.swift */,
@@ -163,6 +179,7 @@
 				041785B21E5593FB00A223F1 /* LeeReadAndWriterDataVC.swift */,
 				041785B41E55984C00A223F1 /* LeeUserDefaultandArchiveVC.swift */,
 				041785B81E55BE9500A223F1 /* LeeFileOperationVC.swift */,
+				04FB19861E56E92D0078E22D /* LeeSQLite3VC.swift */,
 				041785B61E55AAD200A223F1 /* LeeModel.swift */,
 				044E9BC51E543E080074D8AB /* LeeCollectionCell.swift */,
 				044E9BC71E544E3C0074D8AB /* CollectionReusableView.swift */,
@@ -175,6 +192,8 @@
 				04EA93B61E52DD640020EECD /* 屏幕快照 2017-02-14 13.00.59.png */,
 				04F31CB31E5144DA004CC84F /* LaunchScreen.storyboard */,
 				04F31CB61E5144DA004CC84F /* Info.plist */,
+				04FB198D1E56F3580078E22D /* LeeUI-Bridging-Header.h */,
+				04FB19941E56F4E40078E22D /* LeeUITests-Bridging-Header.h */,
 			);
 			path = LeeUI;
 			sourceTree = "<group>";
@@ -195,6 +214,14 @@
 				04F31CCC1E5144DA004CC84F /* Info.plist */,
 			);
 			path = LeeUIUITests;
+			sourceTree = "<group>";
+		};
+		04FB198A1E56F30A0078E22D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04FB198B1E56F30B0078E22D /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +292,12 @@
 				TargetAttributes = {
 					04F31CA61E5144DA004CC84F = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					04F31CBA1E5144DA004CC84F = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 04F31CA61E5144DA004CC84F;
 					};
@@ -306,6 +335,7 @@
 			files = (
 				04F31CB51E5144DA004CC84F /* LaunchScreen.storyboard in Resources */,
 				04F31CB21E5144DA004CC84F /* Assets.xcassets in Resources */,
+				04FB19891E56F2E50078E22D /* LeeDataTest.sqlite in Resources */,
 				04EA93B71E52DD640020EECD /* 屏幕快照 2017-02-14 13.00.59.png in Resources */,
 				04F31CB01E5144DA004CC84F /* Main.storyboard in Resources */,
 			);
@@ -353,6 +383,7 @@
 				04EA93BB1E531B3A0020EECD /* LeeTableCell.swift in Sources */,
 				044E9BC61E543E080074D8AB /* LeeCollectionCell.swift in Sources */,
 				04F31CE11E519B9D004CC84F /* LeeString.swift in Sources */,
+				04FB19871E56E92D0078E22D /* LeeSQLite3VC.swift in Sources */,
 				04F31CE31E51BF90004CC84F /* LeeLabel.swift in Sources */,
 				04EA93B51E52D6B20020EECD /* LeeUIButtunVC.swift in Sources */,
 				04EA93B91E52E2560020EECD /* LeeUITableViewVC.swift in Sources */,
@@ -364,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FB19971E56F4E40078E22D /* LeeDataManager.c in Sources */,
 				04F31CC01E5144DA004CC84F /* LeeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,10 +540,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LeeUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meitianyingye.LeeUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeeUI/LeeUI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -520,10 +555,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LeeUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meitianyingye.LeeUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeeUI/LeeUI-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -533,10 +570,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LeeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meitianyingye.LeeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeeUI/LeeUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeeUI.app/LeeUI";
 			};
@@ -547,10 +587,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = LeeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meitianyingye.LeeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LeeUI/LeeUITests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeeUI.app/LeeUI";
 			};

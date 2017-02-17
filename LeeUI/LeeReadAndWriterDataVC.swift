@@ -11,7 +11,7 @@ import UIKit
 class LeeReadAndWriterDataVC: LeeBVC,UITableViewDelegate,UITableViewDataSource{
 
     var showTableView:UITableView?
-     var listArr = ["userDefault 和对象归档","文件操作",""]
+     var listArr = ["userDefault 和对象归档","文件操作","SQLite3存储和读取数据"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +35,10 @@ class LeeReadAndWriterDataVC: LeeBVC,UITableViewDelegate,UITableViewDataSource{
             break
         case 1:
             let vc = LeeFileOperationVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
+        case 2:
+            let vc = LeeSQLite3VC()
             self.navigationController?.pushViewController(vc, animated: true)
             break
         default:
